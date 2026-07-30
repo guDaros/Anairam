@@ -2,6 +2,7 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Diferenciais } from '@/components/Diferenciais';
 import { AreasAtuacao } from '@/components/AreasAtuacao';
+import { AreasAtuacaoB2B } from '@/components/AreasB2B';
 import { Formacao } from '@/components/Formacao';
 import { FAQ } from '@/components/FAQ';
 import { Dicas } from '@/components/Dicas';
@@ -17,6 +18,7 @@ const Index = () => {
         <Hero />
         <Diferenciais />
         <AreasAtuacao />
+        <AreasAtuacaoB2B/>
         {/*<Formacao />*/}
         <FAQ />
         <Dicas />

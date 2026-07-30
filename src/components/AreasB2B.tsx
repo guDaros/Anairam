@@ -22,13 +22,13 @@ const areas = [
     description: 'Elaboração, análise e revisão de contratos particulares, acordos comerciais e instrumentos jurídicos diversos.',
   },
   {
-    icon: 'credit_score',
+    icon: 'gavel_precedent',
     title: 'Recuperação de Crédito',
     description: 'Ações de execução, cobrança e monitória para empresas que precisam recuperar valores de devedores. Atuação especializada, incluindo localização de ativos e bens do devedor.',
   },
 ];
 
-export function AreasAtuacao() {
+export function AreasAtuacaoB2B() {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { setRef, visibleItems } = useScrollAnimationMultiple(areas.length, {
     threshold: 0.2,
@@ -43,7 +43,7 @@ export function AreasAtuacao() {
   return (
     <section
       id="areas"
-      className="py-20 md:py-28 bg-background "
+      className="py-20 md:py-28 bg-background bg-muted"
       aria-labelledby="areas-title"
     >
       <div className="container">
@@ -58,45 +58,11 @@ export function AreasAtuacao() {
             id="areas-title"
             className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4"
           >
-            Áreas de Atuação
+            Consultoria para Escritórios de Advocacia
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Atuação especializada em Processo Civil, Direito Civil e Direito do Consumidor, 
-            com foco em soluções práticas e resultados efetivos
+            Presto serviço especializado de análise de viabilidade e elaboração de dossiês de recuperação de crédito para outros escritórios, incluindo localização de ativos e bens do devedor e elaboração da peça inicial.
           </p>
-        </div>
-
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-          {areas.map((area, index) => (
-            <article
-              key={area.title}
-              ref={setRef(index)}
-              className={`group bg-card border border-border rounded-lg p-6 md:p-8 card-hover ${
-                visibleItems[index] ? getAnimationClass(index) : 'opacity-0'
-              }`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center flex-shrink-0 group-hover:bg-secondary transition-colors duration-300">
-                  <span
-                    className="material-symbols-outlined text-xl text-primary-foreground"
-                    aria-hidden="true"
-                  >
-                    {area.icon}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-serif text-xl font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {area.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {area.description}
-                  </p>
-                </div>
-              </div>
-            </article>
-          ))}
         </div>
       </div>
     </section>

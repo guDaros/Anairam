@@ -4,12 +4,12 @@ const diferenciais = [
   {
     icon: 'school',
     title: 'Formação Especializada',
-    description: 'Especialização em Direito Civil e Processual Civil, com foco em contratos e relações de consumo.',
+    description: 'Pós-graduação em Direito Civil, Processo Civil e Direito do Consumidor, com atuação especializada também em recuperação de crédito para empresas.',
   },
   {
     icon: 'event_available',
-    title: 'Primeira Consulta',
-    description: 'Explicação clara sobre como funciona o processo, prazos, custos e estratégias possíveis para o seu caso.',
+    title: 'Atendimento Sem Custo Inicial',
+    description: 'Não cobro pela consulta inicial. O atendimento é destinado a causas já ajuizadas — na consulta, explico prazos, estratégias e próximos passos do seu processo.',
   },
   {
     icon: 'favorite',

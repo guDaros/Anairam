@@ -44,7 +44,7 @@ export function Hero() {
               isVisible ? 'animate-fade-in-up' : 'opacity-0'
             }`}
           >
-            Advocacia especializada em Direito Civil e do Consumidor
+             ADVOCACIA ESPECIALIZADA EM DIREITO CIVIL, DO CONSUMIDOR E RECUPERAÇÃO DE CRÉDITO
           </p>
 
           {/* Main Title */}

@@ -4,7 +4,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const faqItems = [
   {
     question: 'Quanto custa uma consulta?',
-    answer: 'O valor da consulta inicial é de R$ 350,00, com duração de até 1 hora. Durante esse encontro, analisamos seu caso, explicamos suas opções legais e traçamos a melhor estratégia. Em alguns casos, é possível resolver a questão já na primeira consulta.',
+    answer: 'Não cobro pela consulta inicial. O atendimento, no entanto, é destinado apenas a causas que já estejam ajuizadas.',
   },
   {
     question: 'Quanto tempo demora um processo judicial?',
@@ -16,11 +16,15 @@ const faqItems = [
   },
   {
     question: 'Você atende online?',
-    answer: 'Sim, ofereço atendimento online por videoconferência para consultas, reuniões e acompanhamento de processos. É uma opção segura, prática e com a mesma qualidade do atendimento presencial, ideal para quem tem agenda apertada ou está em outra cidade.',
+    answer: 'Atendo presencialmente no Paraná, e on-line para todo o Brasil. As consultas podem ser realizadas via videoconferência, e todo o acompanhamento do processo pode ser feito digitalmente, garantindo praticidade e segurança.',
   },
   {
     question: 'Como funciona o processo de indenização por danos?',
     answer: 'O processo de indenização busca reparar prejuízos materiais ou morais causados por terceiros. Após análise do caso, reunimos provas e ingressamos com a ação judicial. O valor da indenização é calculado com base nos danos comprovados e na jurisprudência.',
+  },
+  {
+    question: 'Vocês atendem empresas com recuperação de crédito?',
+    answer: 'Sim. Atuo com ações de execução, cobrança e monitória para empresas, além de prestar consultoria especializada a outros escritórios na análise de viabilidade e elaboração de dossiês de recuperação de crédito.',
   },
 ];
 
