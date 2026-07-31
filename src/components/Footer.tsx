@@ -1,7 +1,7 @@
-import { LAWYER_NAME, OAB_NUMBER_PR } from '@/lib/constants';
+import { LAWYER_NAME, OAB_NUMBER_PR, CURRENT_YEAR, CNPJ_NUMBER, LAWYER_OFFICE } from '@/lib/constants';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  
 
   return (
     <footer className="bg-accent py-10 md:py-12">
@@ -19,12 +19,12 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-accent-foreground/70 text-sm text-center">
-            {currentYear} {LAWYER_NAME} Advocacia. Todos os direitos reservados.
+            {CURRENT_YEAR} {LAWYER_OFFICE} CNPJ: {CNPJ_NUMBER}. Todos os direitos reservados.
           </p>
 
           {/* Legal Links */}
           <div className="flex items-center gap-6">
-            <a
+            {/* <a
               href="/politica-de-privacidade"
               className="text-accent-foreground/70 text-sm hover:text-accent-foreground transition-colors"
             >
@@ -35,7 +35,7 @@ export function Footer() {
               className="text-accent-foreground/70 text-sm hover:text-accent-foreground transition-colors"
             >
               Termos de Uso
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
