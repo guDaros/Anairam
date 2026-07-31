@@ -1,6 +1,6 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Button } from '@/components/ui/button';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/hero-bg2.png';
 
 export function Hero() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
@@ -31,7 +31,7 @@ export function Hero() {
       
       {/* Overlay */}
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-primary/20"
+        className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/43 to-primary/20"
         aria-hidden="true"
       />
 
@@ -44,7 +44,7 @@ export function Hero() {
               isVisible ? 'animate-fade-in-up' : 'opacity-0'
             }`}
           >
-             ADVOCACIA ESPECIALIZADA EM DIREITO CIVIL, DO CONSUMIDOR E RECUPERAÇÃO DE CRÉDITO
+             DIREITO CIVIL, DIREITO DO CONSUMIDOR E RECUPERAÇÃO DE CRÉDITO
           </p>
 
           {/* Main Title */}
@@ -54,20 +54,17 @@ export function Hero() {
               isVisible ? 'animate-fade-in-up delay-100' : 'opacity-0'
             }`}
           >
-            Soluções jurídicas
+            Estratégia Jurídica
             <br />
-            <span className="text-primary">para o seu dia a dia</span>
+            
+            <span className="text-primary">Resultados</span> Concretos
           </h1>
 
           {/* Subtitle */}
-          <p
-            className={`text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 md:mb-10 ${
-              isVisible ? 'animate-fade-in-up delay-200' : 'opacity-0'
-            }`}
-          >
-            Atendimento humano, estratégico e ágil para defender seus direitos 
-            nas relações civis e de consumo. Transformo situações complexas 
-            em soluções claras e seguras.
+          <p className="text-lg md:text-xl text-[#4A3F38] max-w-2xl mb-8 md:mb-10 animate-fade-in-up delay-200">
+            Recuperação de crédito <br/>
+            Execução de Títulos <br/>
+            Investigação de Patrimonial<br/>
           </p>
 
           {/* CTAs */}

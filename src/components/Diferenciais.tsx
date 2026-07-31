@@ -9,7 +9,7 @@ const diferenciais = [
   {
     icon: 'event_available',
     title: 'Atendimento Sem Custo Inicial',
-    description: 'Não cobro pela consulta inicial. O atendimento é destinado a causas já ajuizadas — na consulta, explico prazos, estratégias e próximos passos do seu processo.',
+    description: 'Não cobro a consulta inicial para iniciar um ajuizamento. O objetivo é analisar seu caso, esclarecer suas dúvidas e orientar sobre o procedimento mais adequado.',
   },
   {
     icon: 'favorite',

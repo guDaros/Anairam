@@ -1,4 +1,4 @@
-import { LAWYER_NAME, OAB_NUMBER } from '@/lib/constants';
+import { LAWYER_NAME, OAB_NUMBER_PR } from '@/lib/constants';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +13,7 @@ export function Footer() {
               {LAWYER_NAME}
             </p>
             <p className="text-accent-foreground/70 text-sm">
-              {OAB_NUMBER}
+              {OAB_NUMBER_PR}
             </p>
           </div>
 

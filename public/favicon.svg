@@ -1,0 +1,22 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- fundo bordô com cantos arredondados -->
+  <rect x="0" y="0" width="64" height="64" rx="14" ry="14" fill="#7A1F2B"/>
+
+  <!-- ícone da balança em branco -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="32" y1="12" x2="32" y2="50"/>
+    <circle cx="32" cy="12" r="2.4" fill="#FFFFFF" stroke="none"/>
+    <line x1="16" y1="19" x2="48" y2="19"/>
+
+    <line x1="16" y1="19" x2="11.5" y2="30"/>
+    <line x1="16" y1="19" x2="20.5" y2="30"/>
+    <path d="M9 30 Q16 39 23 30"/>
+
+    <line x1="48" y1="19" x2="43.5" y2="30"/>
+    <line x1="48" y1="19" x2="52.5" y2="30"/>
+    <path d="M41 30 Q48 39 55 30"/>
+
+    <line x1="22" y1="50" x2="42" y2="50"/>
+    <line x1="32" y1="50" x2="32" y2="46.5"/>
+  </g>
+</svg>

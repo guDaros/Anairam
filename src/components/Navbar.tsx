@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { LAWYER_NAME, WHATSAPP_LINK } from '@/lib/constants';
-import logoImg from '@/assets/logo.png';
+import { LAWYER_NAME, WHATSAPP_LINK_PR } from '@/lib/constants';
+import logoImg from '@/assets/logo4.png';
 
 const navLinks = [
   { label: 'Por Que Me Escolher', href: '#diferenciais' },
@@ -80,7 +80,7 @@ export function Navbar() {
         <div className="hidden lg:block">
           <Button asChild variant="default" className="ripple">
             <a
-              href={WHATSAPP_LINK}
+              href={WHATSAPP_LINK_PR}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Fale no WhatsApp"
@@ -122,7 +122,7 @@ export function Navbar() {
               <li className="px-4 pt-4" role="none">
                 <Button asChild variant="default" className="w-full ripple">
                   <a
-                    href={WHATSAPP_LINK}
+                    href={WHATSAPP_LINK_PR}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Fale no WhatsApp"
