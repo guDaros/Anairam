@@ -7,7 +7,6 @@ const navLinks = [
   { label: 'Por Que Me Escolher', href: '#diferenciais' },
   { label: 'Áreas de Atuação', href: '#areas' },
   { label: 'Áreas de Atuação B2B', href: '#areas-b2b ' },
-  { label: 'Formação', href: '#formacao' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contato', href: '#contato' },
 ];
