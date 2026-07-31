@@ -21,7 +21,7 @@ const Index = () => {
         <AreasAtuacaoB2B/>
         {/*<Formacao />*/}
         <FAQ />
-        <Dicas />
+        {/* <Dicas /> */}
         <Contato />
       </main>
       <Footer />

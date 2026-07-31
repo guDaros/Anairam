@@ -61,11 +61,11 @@ export function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-[#4A3F38] max-w-2xl mb-8 md:mb-10 animate-fade-in-up delay-200">
+          {/* <p className="text-lg md:text-xl text-[#4A3F38] max-w-2xl mb-8 md:mb-10 animate-fade-in-up delay-200">
             Recuperação de crédito <br/>
             Execução de Títulos <br/>
             Investigação de Patrimonial<br/>
-          </p>
+          </p> */}
 
           {/* CTAs */}
           <div
