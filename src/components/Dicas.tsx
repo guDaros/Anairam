@@ -1,4 +1,5 @@
 import { useScrollAnimationMultiple, useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { WHATSAPP_LINK_PR } from '@/lib/constants';
 
 const dicas = [
   {
@@ -88,7 +89,7 @@ export function Dicas() {
             Quer orientação no seu caso?
           </p>
           <a
-            href="https://wa.me/5511999999999?text=Olá, gostaria de tirar uma dúvida sobre meu caso"
+            href={WHATSAPP_LINK_PR}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary font-medium hover:text-secondary transition-colors"
