@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -21,6 +22,7 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Playfair Display', 'Georgia', 'serif'],
         display: ['Playfair Display', 'Georgia', 'serif'],
+        montserrat: ['Montserrat', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -72,6 +74,10 @@ export default {
           light: "#770000",
           dark: "#2a0000",
         },
+        /* Paleta da página de links (/falecomigo) */
+        vinho: "#3E0006",
+        ouro: "#BFA27A",
+        suave: "#8a7f7f",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -126,5 +132,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

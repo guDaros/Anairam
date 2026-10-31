@@ -72,7 +72,7 @@ export function FAQ() {
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >
               <button
-                className="w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-muted/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
+                className="w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-muted/50 transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset"
                 onClick={() => toggleItem(index)}
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-answer-${index}`}

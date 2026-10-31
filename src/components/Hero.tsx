@@ -50,7 +50,7 @@ export function Hero() {
           {/* Main Title */}
           <h1
             id="hero-title"
-            className={`font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-tight text-foreground mb-6 md:mb-8 ${
+            className={`font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-10 md:leading-none text-foreground mb-6 md:mb-8 ${
               isVisible ? 'animate-fade-in-up delay-100' : 'opacity-0'
             }`}
           >
