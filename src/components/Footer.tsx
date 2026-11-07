@@ -1,4 +1,5 @@
 import { LAWYER_NAME_SIMPLIFIED, OAB_NUMBER_BA, OAB_NUMBER_PR, CURRENT_YEAR, CNPJ_NUMBER, LAWYER_OFFICE} from '@/lib/constants';
+import { openCookiePreferences } from '@/lib/analytics';
 
 export function Footer() {
   
@@ -24,6 +25,13 @@ export function Footer() {
 
           {/* Legal Links */}
           <div className="flex items-center gap-6">
+            <button
+              type="button"
+              onClick={openCookiePreferences}
+              className="text-accent-foreground/70 text-sm hover:text-accent-foreground transition-colors"
+            >
+              Preferências de cookies
+            </button>
             {/* <a
               href="/politica-de-privacidade"
               className="text-accent-foreground/70 text-sm hover:text-accent-foreground transition-colors"

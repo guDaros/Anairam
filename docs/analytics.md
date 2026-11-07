@@ -14,13 +14,19 @@ index.html: Consent Mode (tudo negado) ──► GTM ──► tags do GA4 / Goo
 
 1. **`index.html`** define o Consent Mode como *negado* para `ad_storage`, `ad_user_data`,
    `ad_personalization` e `analytics_storage` **antes** de carregar o GTM. Se o visitante já aceitou
-   antes (guardado em `localStorage`, chave `cookie-consent`), o consentimento é restaurado na hora.
-2. **`CookieBanner`** aparece até o visitante escolher. *Aceitar* ou *Recusar* atualiza o consentimento
-   (`gtag('consent', 'update', ...)`) e envia o evento `consent_update`.
+   antes (guardado em `localStorage`, chave `cookie-consent`, no formato `{"analytics":true,"ads":false}`), o consentimento é restaurado na hora.
+2. **`CookieBanner`** aparece até o visitante escolher: **Aceitar tudo** (análise e publicidade),
+   **Aceitar recomendados** (só análise) ou **Personalizar**, que abre interruptores separados para
+   *Análise* e *Publicidade* (desmarcados por padrão; os essenciais ficam sempre ativos). Os valores de
+   "tudo" e "recomendados" estão em `ALL_CONSENT` e `RECOMMENDED_CONSENT`, em `src/lib/analytics.ts`. A escolha atualiza o consentimento
+   (`gtag('consent', 'update', ...)`) e envia o evento `consent_update`. O link **Preferências de cookies**,
+   no rodapé, reabre o painel para o visitante mudar a escolha.
 3. **`RouteTracker`** envia `virtual_page_view` a cada troca de rota do React Router.
 4. Os links de WhatsApp enviam `whatsapp_click`.
 
-Com o consentimento negado, as tags do Google rodam em modo limitado, sem cookies de marketing.
+Mapeamento: **Análise** controla `analytics_storage`; **Publicidade** controla `ad_storage`,
+`ad_user_data` e `ad_personalization`. Com o consentimento negado, as tags do Google rodam em modo
+limitado, sem cookies.
 
 ## Eventos enviados ao `dataLayer`
 
@@ -28,7 +34,7 @@ Com o consentimento negado, as tags do Google rodam em modo limitado, sem cookie
 |---|---|---|
 | `whatsapp_click` | Clique em qualquer link de WhatsApp | `click_location`, `office` |
 | `virtual_page_view` | Troca de rota (não dispara na primeira página) | `page_path`, `page_location`, `page_title` |
-| `consent_update` | Visitante aceita ou recusa os cookies | `consent_choice` (`granted` ou `denied`) |
+| `consent_update` | Visitante salva uma escolha de cookies | `consent_analytics` e `consent_ads` (`granted` ou `denied`) |
 
 Valores de `click_location`: `menu_desktop`, `menu_mobile`, `botao_flutuante`, `contato_pr`,
 `contato_ba` e `pagina_de_links`. Valores de `office`: `pr` (Paraná) e `ba` (Bahia).
@@ -68,7 +74,7 @@ Use **Visualizar** para testar (abra o site, aceite os cookies e clique no Whats
 |---|---|
 | `index.html` | Consent Mode padrão e snippet do GTM |
 | `src/lib/analytics.ts` | Consentimento (`getStoredConsent`, `saveConsent`) e eventos (`trackWhatsAppClick`, `trackVirtualPageView`) |
-| `src/components/CookieBanner.tsx` | Banner de consentimento |
+| `src/components/CookieBanner.tsx` | Banner de consentimento e painel de preferências |
 | `src/components/RouteTracker.tsx` | Evento a cada troca de rota |
 
 A chave `cookie-consent` aparece em `index.html` e em `src/lib/analytics.ts`; mantenha as duas iguais.

@@ -37,12 +37,14 @@
         wait_for_update: 500
       });
       try {
-        if (localStorage.getItem('cookie-consent') === 'granted') {
+        var saved = JSON.parse(localStorage.getItem('cookie-consent'));
+        if (saved) {
+          var ads = saved.ads ? 'granted' : 'denied';
           gtag('consent', 'update', {
-            ad_storage: 'granted',
-            ad_user_data: 'granted',
-            ad_personalization: 'granted',
-            analytics_storage: 'granted'
+            ad_storage: ads,
+            ad_user_data: ads,
+            ad_personalization: ads,
+            analytics_storage: saved.analytics ? 'granted' : 'denied'
           });
         }
       } catch (e) {}
