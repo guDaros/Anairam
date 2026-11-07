@@ -114,7 +114,7 @@ export function CookieBanner() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button variant="outline" className="flex-1" onClick={() => confirm(preferences)}>
-              Salvar escolhas
+              Confirmar escolhas
             </Button>
             <Button className="flex-1" onClick={() => confirm(ALL_CONSENT)}>
               Aceitar tudo
