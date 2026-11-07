@@ -1,77 +1,66 @@
-# Welcome to your Lovable project
+# Site Anairam Souza Advocacia
 
-## Project info
+Site institucional da advogada Anairam de Souza, com a página inicial e a página de links
+(`/falecomigo`) usada na bio do Instagram.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tecnologias
 
-## How can I edit this code?
+- [Vite](https://vite.dev) + [React](https://react.dev) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com) e componentes [shadcn/ui](https://ui.shadcn.com)
+- [React Router](https://reactrouter.com) e [TanStack Query](https://tanstack.com/query)
+- Vitest e Testing Library para testes
 
-There are several ways of editing your application.
+## Como rodar
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requer Node.js 24 ou superior e npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O servidor de desenvolvimento abre em `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts
 
-**Use GitHub Codespaces**
+| Comando | O que faz |
+|---|---|
+| `npm run dev` | Servidor de desenvolvimento com recarga automática |
+| `npm run build` | Gera o build de produção em `dist/` |
+| `npm run preview` | Serve o build de produção localmente |
+| `npm run lint` | Roda o ESLint |
+| `npm test` | Roda os testes uma vez |
+| `npm run test:watch` | Roda os testes em modo observação |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Estrutura
 
-## What technologies are used for this project?
+```
+src/
+  components/   seções da página (Hero2, Contato, FAQ, Instagram...)
+    links/      componentes da página /falecomigo
+    instagram/  componentes da seção do Instagram
+    ui/         componentes base do shadcn/ui
+  hooks/        hooks (animação de rolagem, feed do Instagram)
+  lib/          constantes (contatos, OABs, links) e utilitários
+  pages/        páginas: Index (/), FaleComigo (/falecomigo) e NotFound
+  assets/       imagens
+docs/           documentação das integrações
+```
 
-This project is built with:
+Dados de contato, números de OAB, links do WhatsApp e do Instagram ficam centralizados em
+`src/lib/constants.ts`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deploy
 
-## How can I deploy this project?
+O `Dockerfile` faz o build do site e o serve com nginx na porta **81**, com fallback de SPA para o
+React Router (`nginx.conf`).
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```sh
+docker build -t site-anairam .
+docker run -p 81:81 site-anairam
+```
 
 ## Documentação
 
-- [Integração com o Instagram](docs/instagram.md): como a seção de publicações funciona, configuração, limites e solução de problemas.
+- [Integração com o Instagram](docs/instagram.md): como a seção de publicações funciona,
+  configuração, limites e solução de problemas.
