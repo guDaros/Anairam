@@ -1,4 +1,4 @@
-import { LAWYER_NAME, OAB_NUMBER_PR, CURRENT_YEAR, CNPJ_NUMBER, LAWYER_OFFICE } from '@/lib/constants';
+import { LAWYER_NAME_SIMPLIFIED, OAB_NUMBER_BA, OAB_NUMBER_PR, CURRENT_YEAR, CNPJ_NUMBER, LAWYER_OFFICE} from '@/lib/constants';
 
 export function Footer() {
   
@@ -10,10 +10,10 @@ export function Footer() {
           {/* Logo/Name */}
           <div className="text-center md:text-left">
             <p className="font-serif text-xl text-accent-foreground font-medium mb-1">
-              {LAWYER_NAME}
+              {LAWYER_NAME_SIMPLIFIED}
             </p>
             <p className="text-accent-foreground/70 text-sm">
-              {OAB_NUMBER_PR}
+              {OAB_NUMBER_PR} · {OAB_NUMBER_BA}
             </p>
           </div>
 

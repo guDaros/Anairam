@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { LAWYER_NAME, WHATSAPP_LINK_PR } from '@/lib/constants';
+import { WHATSAPP_LINK_PR } from '@/lib/constants';
 import logoImg from '@/assets/logo4.png';
 
 const navLinks = [
-  { label: 'Por Que Me Escolher', href: '#diferenciais' },
-  { label: 'Áreas de Atuação', href: '#areas' },
-  { label: 'Áreas de Atuação B2B', href: '#areas-b2b ' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Sobre', href: '#diferenciais' },
+  { label: 'Instagram', href: '#instagram' },
   { label: 'Contato', href: '#contato' },
+  { label: 'Áreas de Atuação', href: '#areas' },
+  { label: 'Áreas de Atuação B2B', href: '#areas-b2b' },
+  { label: 'FAQ', href: '#faq' },
 ];
 
 export function Navbar() {
@@ -23,6 +24,8 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const isOverDarkHero = !isScrolled;
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -50,7 +53,7 @@ export function Navbar() {
           <img
             src={logoImg}
             alt="Anairam Souza Advocacia"
-            className="h-12 md:h-14 w-auto object-contain [background:transparent]"
+            className={`h-12 md:h-14 w-auto object-contain [background:transparent] ${isOverDarkHero ? 'brightness-0 invert' : ''}`}
           />
           {/* Nome em texto (comentado - substituído pelo logo)
           <span className="font-serif text-xl md:text-2xl font-semibold text-primary">
@@ -66,7 +69,11 @@ export function Navbar() {
               <a
                 href={link.href}
                 role="menuitem"
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className={`text-sm font-medium transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:transition-all after:duration-300 hover:after:w-full ${
+                  isOverDarkHero
+                    ? 'text-white/90 hover:text-white after:bg-white'
+                    : 'text-foreground/80 hover:text-primary after:bg-primary'
+                }`}
                 onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
@@ -77,7 +84,7 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <Button asChild variant="default" className="ripple">
+          <Button asChild variant="default" className={`ripple ${isOverDarkHero ? 'bg-white text-primary hover:bg-white/90' : ''}`}>
             <a
               href={WHATSAPP_LINK_PR}
               target="_blank"
@@ -92,7 +99,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 text-foreground"
+          className={`lg:hidden p-2 ${isOverDarkHero ? 'text-white' : 'text-foreground'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={isMobileMenuOpen}

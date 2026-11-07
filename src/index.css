@@ -38,7 +38,7 @@
 /* Law Firm Premium Design System
    Inspired by feltrimcorrea.com.br
    Colors: Bordô palette with elegant whites and grays
-   Typography: Playfair Display (headings) + Inter (body)
+   Typography: Cormorant Garamond (headings) + Inter (body)
 */
 
 @layer base {
@@ -141,7 +141,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     @apply font-medium tracking-tight;
   }
 

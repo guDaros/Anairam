@@ -26,6 +26,16 @@ const areas = [
     title: 'Recuperação de Crédito',
     description: 'Ações de execução, cobrança e monitória para empresas que precisam recuperar valores de devedores. Atuação especializada, incluindo localização de ativos e bens do devedor.',
   },
+  {
+    icon: 'family_restroom',
+    title: 'Direito de Família e Sucessões',
+    description: 'Divórcio, guarda, pensão alimentícia, convivência com os filhos, união estável, inventário e partilha de bens, com atenção ao lado humano de cada situação.',
+  },
+  {
+    icon: 'elderly',
+    title: 'Direito Previdenciário',
+    description: 'Aposentadorias, pensão por morte, auxílio por incapacidade (antigo auxílio-doença), BPC/LOAS, revisão de benefícios e recursos contra decisões do INSS.',
+  },
 ];
 
 export function AreasAtuacao() {
@@ -43,7 +53,7 @@ export function AreasAtuacao() {
   return (
     <section
       id="areas"
-      className="py-20 md:py-28 bg-background "
+      className="py-20 md:py-28 bg-muted"
       aria-labelledby="areas-title"
     >
       <div className="container">
@@ -62,7 +72,7 @@ export function AreasAtuacao() {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Atuação especializada em Processo Civil, Direito Civil e Direito do Consumidor, 
-            com foco em soluções práticas e resultados efetivos
+            com método e clareza em cada etapa
           </p>
         </div>
 

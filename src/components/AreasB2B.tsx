@@ -43,7 +43,7 @@ export function AreasAtuacaoB2B() {
   return (
     <section
       id="areas-b2b"
-      className="py-20 md:py-28 bg-background bg-muted"
+      className="py-20 md:py-28 bg-background"
       aria-labelledby="areas-title"
     >
       <div className="container">

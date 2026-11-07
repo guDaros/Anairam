@@ -20,8 +20,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
         montserrat: ['Montserrat', 'system-ui', 'sans-serif'],
       },
       colors: {
@@ -119,13 +119,13 @@ export default {
             maxWidth: '65ch',
             color: 'hsl(var(--foreground))',
             h1: {
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: 'Cormorant Garamond, serif',
             },
             h2: {
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: 'Cormorant Garamond, serif',
             },
             h3: {
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: 'Cormorant Garamond, serif',
             },
           },
         },

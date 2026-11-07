@@ -3,27 +3,23 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const faqItems = [
   {
-    question: 'Quanto custa uma consulta?',
-    answer: 'Não cobro pela consulta inicial. O atendimento, no entanto, é destinado apenas a causas que já estejam ajuizadas.',
-  },
-  {
     question: 'Quanto tempo demora um processo judicial?',
-    answer: 'O tempo varia conforme a complexidade do caso e o tipo de ação. Processos simples podem ser resolvidos em poucos meses, enquanto ações mais complexas podem levar de 1 a 3 anos. Oferecemos acompanhamento constante para manter você informado sobre cada etapa.',
+    answer: 'O tempo varia conforme a complexidade do caso e o tipo de ação. Processos simples podem ser resolvidos em poucos meses, enquanto ações mais complexas podem levar de 1 a 3 anos. Ofereço acompanhamento constante para manter você informado sobre cada etapa.',
   },
   {
     question: 'Quais documentos preciso para abrir um processo?',
-    answer: 'Os documentos variam conforme o tipo de ação. Geralmente são necessários: RG, CPF, comprovante de residência, contratos e documentos relacionados ao caso. Na consulta inicial, orientamos exatamente o que será necessário para o seu caso específico.',
+    answer: 'Os documentos variam conforme o tipo de ação. Geralmente são necessários: RG, CPF, comprovante de residência, contratos e documentos relacionados ao caso. Na consulta inicial, oriento exatamente o que será necessário para o seu caso específico.',
   },
   {
     question: 'Você atende online?',
-    answer: 'Atendo presencialmente no Paraná, e on-line para todo o Brasil. As consultas podem ser realizadas via videoconferência, e todo o acompanhamento do processo pode ser feito digitalmente, garantindo praticidade e segurança.',
+    answer: 'Atendo presencialmente no Paraná e na Bahia, e on-line para todo o Brasil. As consultas podem ser realizadas via videoconferência, e todo o acompanhamento do processo pode ser feito digitalmente, garantindo praticidade e segurança.',
   },
   {
     question: 'Como funciona o processo de indenização por danos?',
-    answer: 'O processo de indenização busca reparar prejuízos materiais ou morais causados por terceiros. Após análise do caso, reunimos provas e ingressamos com a ação judicial. O valor da indenização é calculado com base nos danos comprovados e na jurisprudência.',
+    answer: 'O processo de indenização busca reparar prejuízos materiais ou morais causados por terceiros. Após análise do caso, reúno provas e ingresso com a ação judicial. O valor da indenização é calculado com base nos danos comprovados e na jurisprudência.',
   },
   {
-    question: 'Vocês atendem empresas com recuperação de crédito?',
+    question: 'Você atende empresas com recuperação de crédito?',
     answer: 'Sim. Atuo com ações de execução, cobrança e monitória para empresas, além de prestar consultoria especializada a outros escritórios na análise de viabilidade e elaboração de dossiês de recuperação de crédito.',
   },
 ];
@@ -39,7 +35,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="py-20 md:py-28 bg-background"
+      className="py-20 md:py-28 bg-muted"
       aria-labelledby="faq-title"
     >
       <div className="container">

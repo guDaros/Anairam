@@ -44,7 +44,7 @@ export function Hero() {
               isVisible ? 'animate-fade-in-up' : 'opacity-0'
             }`}
           >
-             DIREITO CIVIL, DIREITO DO CONSUMIDOR E RECUPERAÇÃO DE CRÉDITO
+             {/* DIREITO CIVIL, DIREITO DO CONSUMIDOR E RECUPERAÇÃO DE CRÉDITO */}
           </p>
 
           {/* Main Title */}
@@ -57,7 +57,7 @@ export function Hero() {
             Estratégia Jurídica
             <br />
             
-            <span className="text-primary">Resultados</span> Concretos
+            <span className="text-primary">com Rigor</span> Técnico
           </h1>
 
           {/* Subtitle */}
@@ -97,16 +97,6 @@ export function Hero() {
             </Button>
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div 
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-        aria-hidden="true"
-      >
-        <span className="material-symbols-outlined text-3xl text-primary/60">
-          expand_more
-        </span>
       </div>
     </section>
   );

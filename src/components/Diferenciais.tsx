@@ -7,11 +7,6 @@ const diferenciais = [
     description: 'Pós-graduação em Direito Civil, Processo Civil e Direito do Consumidor, com atuação especializada também em recuperação de crédito para empresas.',
   },
   {
-    icon: 'event_available',
-    title: 'Atendimento Sem Custo Inicial',
-    description: 'Não cobro a consulta inicial para iniciar um ajuizamento. O objetivo é analisar seu caso, esclarecer suas dúvidas e orientar sobre o procedimento mais adequado.',
-  },
-  {
     icon: 'favorite',
     title: 'Atendimento Humanizado',
     description: 'Escuta ativa e empatia para compreender suas necessidades e oferecer o suporte que você precisa.',
@@ -52,7 +47,7 @@ export function Diferenciais() {
         </div>*/}
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {diferenciais.map((item, index) => (
             <article
               key={item.title}
