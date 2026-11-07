@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { LinkButton } from '@/components/links/LinkButton';
 import { LinksFooter } from '@/components/links/LinksFooter';
 import { LINKS_SITE_URL, LINKS_WHATSAPP_BA, LINKS_WHATSAPP_PR } from '@/lib/constants';
+import { trackWhatsAppClick } from '@/lib/analytics';
 import logoImg from '@/assets/logo-links.png';
 
 const PAGE_TITLE = 'Anairam Souza Advocacia';
@@ -9,8 +10,8 @@ const PAGE_DESCRIPTION =
   'Direito do Consumidor, Direito Cível e Recuperação de Crédito. Paraná, Bahia e on-line para todo o Brasil.';
 
 const links = [
-  { label: 'WhatsApp Paraná', href: LINKS_WHATSAPP_PR },
-  { label: 'WhatsApp Bahia', href: LINKS_WHATSAPP_BA },
+  { label: 'WhatsApp Paraná', href: LINKS_WHATSAPP_PR, onClick: () => trackWhatsAppClick('pagina_de_links', 'pr') },
+  { label: 'WhatsApp Bahia', href: LINKS_WHATSAPP_BA, onClick: () => trackWhatsAppClick('pagina_de_links', 'ba') },
   { label: 'Site', href: LINKS_SITE_URL },
 ];
 
@@ -42,7 +43,7 @@ const FaleComigo = () => {
 
         <nav aria-label="Links de contato" className="flex flex-col gap-[14px]">
           {links.map((link) => (
-            <LinkButton key={link.label} href={link.href}>
+            <LinkButton key={link.label} href={link.href} onClick={link.onClick}>
               {link.label}
             </LinkButton>
           ))}

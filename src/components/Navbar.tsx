@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { WHATSAPP_LINK_PR } from '@/lib/constants';
+import { trackWhatsAppClick } from '@/lib/analytics';
 import logoImg from '@/assets/logo4.png';
 
 const navLinks = [
@@ -87,6 +88,7 @@ export function Navbar() {
           <Button asChild variant="default" className={`ripple ${isOverDarkHero ? 'bg-white text-primary hover:bg-white/90' : ''}`}>
             <a
               href={WHATSAPP_LINK_PR}
+              onClick={() => trackWhatsAppClick('menu_desktop', 'pr')}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Fale no WhatsApp"
@@ -129,6 +131,7 @@ export function Navbar() {
                 <Button asChild variant="default" className="w-full ripple">
                   <a
                     href={WHATSAPP_LINK_PR}
+                    onClick={() => trackWhatsAppClick('menu_mobile', 'pr')}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Fale no WhatsApp"

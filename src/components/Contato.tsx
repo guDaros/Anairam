@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { trackWhatsAppClick } from '@/lib/analytics';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Button } from '@/components/ui/button';
 import { EMAIL, OAB_NUMBER_PR, WHATSAPP_DISPLAY_PR, WHATSAPP_LINK_PR, INSTAGRAM, INSTAGRAM_HANDLE, WHATSAPP_LINK_BH, OAB_NUMBER_BA, WHATSAPP_DISPLAY_BH } from '@/lib/constants';
@@ -7,6 +8,7 @@ import { EMAIL, OAB_NUMBER_PR, WHATSAPP_DISPLAY_PR, WHATSAPP_LINK_PR, INSTAGRAM,
 const OFFICES = [
   {
     estado: 'Bahia',
+    office: 'ba' as const,
     oab: OAB_NUMBER_BA,
     endereco: 'Rua Exemplo, 000 - Bairro, Salvador - BA, CEP 00000-000',
     telefone: WHATSAPP_DISPLAY_BH,
@@ -14,6 +16,7 @@ const OFFICES = [
   },
   {
     estado: 'Paraná',
+    office: 'pr' as const,
     oab: OAB_NUMBER_PR,
     telefone: WHATSAPP_DISPLAY_PR,
     whatsappLink: WHATSAPP_LINK_PR,
@@ -108,6 +111,7 @@ export function Contato() {
                 <Button asChild className="w-full ripple">
                   <a
                     href={escritorio.whatsappLink}
+                    onClick={() => trackWhatsAppClick(`contato_${escritorio.office}`, escritorio.office)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

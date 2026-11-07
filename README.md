@@ -64,3 +64,4 @@ docker run -p 81:81 site-anairam
 
 - [Integração com o Instagram](docs/instagram.md): como a seção de publicações funciona,
   configuração, limites e solução de problemas.
+- [Analytics, consentimento e Google Ads](docs/analytics.md): GTM, banner de cookies, eventos e configuração do painel.
